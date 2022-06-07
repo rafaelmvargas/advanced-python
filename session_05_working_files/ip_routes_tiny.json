@@ -1,0 +1,125 @@
+{
+
+  "jsonrpc": "2.0",
+
+  "result": [
+
+    {
+
+      "vrfs": {
+
+        "default": {
+
+          "routes": {
+
+            "162.111.204.64/27": {
+
+              "kernelProgrammed": true,
+
+              "directlyConnected": false,
+
+              "preference": 20,
+
+              "routeAction": "forward",
+
+              "vias": [
+
+                {
+
+                  "interface": "Port-Channel1",
+
+                  "nexthopAddr": "10.159.120.71"
+
+                }
+
+              ],
+
+              "metric": 0,
+
+              "hardwareProgrammed": true,
+
+              "routeType": "eBGP"
+
+            },
+
+            "209.191.231.0/24": {
+
+              "kernelProgrammed": true,
+
+              "directlyConnected": false,
+
+              "preference": 18,
+
+              "routeAction": "forward",
+
+              "vias": [
+
+                {
+
+                  "interface": "Port-Channel1",
+
+                  "nexthopAddr": "10.159.120.71"
+
+                }
+
+              ],
+
+              "metric": 0,
+
+              "hardwareProgrammed": true,
+
+              "routeType": "eBGP"
+
+            },
+
+            "63.72.28.64/27": {
+
+              "kernelProgrammed": true,
+
+              "directlyConnected": false,
+
+              "preference": 19,
+
+              "routeAction": "forward",
+
+              "vias": [
+
+                {
+
+                  "interface": "Port-Channel1",
+
+                  "nexthopAddr": "10.159.120.71"
+
+                }
+
+              ],
+
+              "metric": 0,
+
+              "hardwareProgrammed": true,
+
+              "routeType": "eBGP"
+
+            }
+
+          },
+
+          "allRoutesProgrammedKernel": true,
+
+          "routingDisabled": false,
+
+          "allRoutesProgrammedHardware": true,
+
+          "defaultRouteState": "notSet"
+
+        }
+
+      }
+
+    }
+
+  ],
+
+  "id": "EapiExplorer-1"
+
+}
