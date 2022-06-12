@@ -1,6 +1,5 @@
 # Ex 1.2
 # Look through a file and count lines
-from email import header
 
 
 fname = "../pyku.txt"
