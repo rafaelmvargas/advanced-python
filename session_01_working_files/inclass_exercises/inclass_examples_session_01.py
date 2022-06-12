@@ -2,9 +2,6 @@
 # Look through a file and count lines
 
 
-from enum import unique
-
-
 fname = "../pyku.txt"
 
 with open(fname) as fh:
