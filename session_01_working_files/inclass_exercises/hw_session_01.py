@@ -80,3 +80,19 @@ test_key = input("Enter userID to get their state: ")
 
 if test_key in sstate_dict:
     print(sstate_dict[test_key])
+
+# Ex 1.7
+fh = open("../revenue.csv")
+headers = next(fh)
+
+state_count = {}
+
+for row in fh:
+    line = row.rstrip().split(",")
+    state = line[1]
+
+    if state not in state_count:
+        state_count[state] = 0
+    state_count[state] += 1
+
+print(state_count)
