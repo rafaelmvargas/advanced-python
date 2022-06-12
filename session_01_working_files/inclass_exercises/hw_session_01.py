@@ -2,6 +2,9 @@
 # Look through a file and count lines
 
 
+from enum import unique
+
+
 fname = "../pyku.txt"
 
 with open(fname) as fh:
@@ -95,3 +98,22 @@ for row in fh:
     state_count[state] += 1
 
 print(state_count)
+
+# Ex 1.8
+# Process individual words from a file
+unique_words = set()
+
+fh = open("../pyku.txt")
+
+document = fh.read()
+words = document.split()
+
+
+for word in words:
+    cleaned_word = word.lower().rstrip(".,")
+
+    unique_words.add(cleaned_word)
+print(unique_words)
+
+
+# Ex 1.9
