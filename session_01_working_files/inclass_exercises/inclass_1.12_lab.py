@@ -11,7 +11,7 @@ next(fh)
 sum = 0
 
 for line in fh:
-    datetime, buyer_id, seller_id, volume, price = line.rstrip().split(",")
+    volume = line.rstrip().split(",")[3]
     volume = int(volume)
     sum += volume
 
