@@ -4,7 +4,15 @@
 
 import runreport
 
+fname = "../ad_companies.csv"
 
+fh = open(fname)
+next(fh)
+
+for line in fh:
+    id, company, city, state = line.rstrip().split(",")
+    if state == "AZ":
+        print(line.rstrip())
 
 
 # Expected Output:
@@ -14,4 +22,3 @@ import runreport
 
 # Please note that there is no blank line printed after each
 # line.
-
