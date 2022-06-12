@@ -3,7 +3,17 @@
 
 import runreport
 
+fname = "../ad_companies.csv"
+fh = open(fname)
+next(fh)
 
+list_of_states = []
+
+for line in fh:
+    state = line.rstrip().split(",")[3]
+    list_of_states.append(state)
+
+print(list_of_states)
 
 
 # Keep in mind that since the state value is the last on each
@@ -13,4 +23,3 @@ import runreport
 # Expected Output:
 
 # ['OR', 'OR', 'AZ', 'PA', 'AZ']
-
