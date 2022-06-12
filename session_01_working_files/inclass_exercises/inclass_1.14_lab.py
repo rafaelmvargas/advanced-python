@@ -4,7 +4,15 @@
 
 import runreport
 
+fname = "../pyku.txt"
+fh = open(fname)
 
+text = fh.read().split()
+
+for word in text:
+    clean_word = word.rstrip(".,")
+    if len(clean_word) > 4:
+        print(clean_word)
 
 
 # Expected Output:
@@ -13,4 +21,3 @@ import runreport
 # gouda
 # parrot
 # ceased
-
