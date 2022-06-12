@@ -5,11 +5,19 @@
 
 import runreport
 
+fname = "../ad_buys.csv"
 
+fh = open(fname)
+header = next(fh)
 
+line_count = 0
+
+for line in fh:
+    line_count += 1
+
+print(line_count)
 
 
 # Expected Output:
 
 # 15
-
