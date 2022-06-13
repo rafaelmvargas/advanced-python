@@ -17,10 +17,10 @@ text = fh.read().lower().split()
 for word in text:
     word = word.strip(string.punctuation)
     if word not in word_count:
-        word_count[word] = 1
-    else:
-        word_count[word] += 1
+        word_count[word] = 0
+    word_count[word] += 1
 
+print(word_count)
 
 assert word_count["in"] == 5
 assert word_count["new"] == 1
