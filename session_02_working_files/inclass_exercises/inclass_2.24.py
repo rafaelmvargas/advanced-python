@@ -6,7 +6,7 @@
 
 import sqlite3
 
-db_filename = '../session_2.db'
+db_filename = "../session_2.db"
 
 conn = sqlite3.connect(db_filename)
 
@@ -15,3 +15,4 @@ c = conn.cursor()
 c.execute("SELECT * FROM revenue")
 
 
+print([t[0] for t in c.description])

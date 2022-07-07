@@ -7,21 +7,27 @@
 # Make sure to call conn.commit() (where conn is the
 # connection object) to see results.  Also remember to close
 # the database connection when done.
-# 
+#
 # After running, return to your SQLite3 session and perform a
 # SELECT * query so you can see the new row.
 
 import sqlite3
 
-db_filename = '../session_2.db'
+db_filename = "../session_2.db"
 
 conn = sqlite3.connect(db_filename)
 
 c = conn.cursor()
 
-query = 'INSERT INTO revenue VALUES (?, ?, ?)'
+query = "INSERT INTO revenue VALUES (?, ?, ?)"
 
+t = ("Joe's", "NY", 0.03)
+
+c.execute(query, t)
+
+conn.commit()
 
 # If you don't see the change, make sure you executed
 # conn.commit() after executing the insert.
 
+conn.close()

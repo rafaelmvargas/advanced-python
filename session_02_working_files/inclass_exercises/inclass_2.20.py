@@ -7,8 +7,29 @@
 # Close the database connection with conn.close() when
 # finished.
 
-import sqlite3
+import sqlite3  # import pymysql import oracle_cx
 
-db_filename = '../session_2.db'
+db_filename = "../session_2.db"
 
 
+conn = sqlite3.connect(db_filename)  # a db connection object
+cursor = conn.cursor()  # a cursor object
+cursor.execute("SELECT * FROM revenue")
+
+# one row: .fetchone()
+# row = cursor.fetchone()
+# print(row)
+
+
+# multiple rows: .fetchmany(n)
+# rows = cursor.fetchmany(3)
+
+# all rows: .fetchall()
+# rows = cursor.fetchall()
+# print(rows)
+
+#'for' looping over result set rows
+# for row in cursor:
+#     print(row)
+
+conn.close()
