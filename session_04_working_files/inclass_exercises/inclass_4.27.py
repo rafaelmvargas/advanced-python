@@ -14,7 +14,7 @@ numbers = [
 ]
 
 for val in numbers:
-    if re.search(r'', val):
+    if re.search(r'1\d+', val):
         print(val)
 
 # Expected Output:

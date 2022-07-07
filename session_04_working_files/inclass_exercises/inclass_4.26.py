@@ -12,7 +12,7 @@ lines = [
     "Isn't it an exceptional experience? "]
 
 for line in lines:
-    if re.search(r'', line):
+    if re.search(r'a(ne?)?\s', line):
         print(line)
 
 # Expected Output:

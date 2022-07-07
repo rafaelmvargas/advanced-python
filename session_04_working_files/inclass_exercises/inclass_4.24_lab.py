@@ -5,12 +5,12 @@ import runreport
 
 import re
 
-words = ['apple', 'pear', 'orange', 'kiwi', 'elderberry', 'carrot', 'ugli fruit']
+words = ["apple", "pear", "orange", "kiwi", "elderberry", "carrot", "ugli fruit"]
 for word in words:
-    if re.search(r'', word):
-        prepend = 'an'
+    if re.search(r"^[aeiou]", word):
+        prepend = "an"
     else:
-        prepend = 'a'
+        prepend = "a"
     print(f"{prepend} {word}")
 
 # Expected Output:
@@ -22,4 +22,3 @@ for word in words:
 # an elderberry
 # a carrot
 # an ugli fruit
-

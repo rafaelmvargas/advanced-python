@@ -3,13 +3,15 @@
 
 import re
 
-rs_row = 'Catalog ID: 2839-587    Pub. Date: 2019-09-03'
+rs_row = "Catalog ID: 2839-587    Pub. Date: 2019-09-03"
 
-matchobj = re.search(r'', rs_row)
+matchobj = re.search(
+    r"Catalog ID:\s+(\d+\-\d+)\s+Pub\. Date:\s+(\d{4}\-\d{2}\-\d{2})", rs_row
+)
 
-if matchobj:
-    print(matchobj.group(1))
-    print(matchobj.group(2))
+# if matchobj:
+print(matchobj.group(1))
+print(matchobj.group(2))
 
 # Expected Output:
 
@@ -21,4 +23,3 @@ if matchobj:
 # did not find a match and returned None, and the code
 # attempted to call .group() on None.  Check the string and
 # pattern to determine why it did not match.
-

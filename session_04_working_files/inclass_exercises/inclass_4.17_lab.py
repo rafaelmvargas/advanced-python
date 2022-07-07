@@ -15,7 +15,7 @@ line4!"""
 lines = text.splitlines()
 
 for line in lines:
-    if re.search(r'', line):
+    if re.search(r'\S', line):
         print(line)
 
 # Expected Output:

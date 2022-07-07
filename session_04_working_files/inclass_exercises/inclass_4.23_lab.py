@@ -6,7 +6,7 @@ import re
 
 dates = ['Jan. 3, 2018', '23-Mar-17', '12/02/98', '12/03/1998', '23.17.2018']
 for date in dates:
-    if re.search(r'', date):
+    if re.search(r'[\d]{2}/[\d]{2}/[\d]{2}$', date):
         print(date)
 
 # Expected Output:

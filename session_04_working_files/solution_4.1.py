@@ -14,15 +14,20 @@ counter = 0
 
 log_file = open("./access_log.txt", "r")
 
-for line in log_file:
-    match_username = re.search(r"/~([a-z]{1,4}\d+)", line)
-    match_bytes = re.search(r"(\d+)$", line)
+match_username = re.compile(r"/~([a-z]{1,4}\d+)")
+match_bytes = re.compile(r"(\d+)$")
 
-    if match_username and match_bytes is not None:
+for line in log_file:
+    nyu_id = re.search(match_username, line)
+    file_size = re.search(match_bytes, line)
+
+    if (nyu_id is not None) and (file_size is not None):
+
         counter += 1
-        # print(match_username.group(1), match_bytes.group(1))
-        nyu_id = match_username.group(1)
-        file_size = int(match_bytes.group(1))
+
+        nyu_id = nyu_id.group(1)
+        file_size = int(file_size.group(1))
+
         if nyu_id not in sum_dict:
             sum_dict[nyu_id] = 0
         sum_dict[nyu_id] += file_size
