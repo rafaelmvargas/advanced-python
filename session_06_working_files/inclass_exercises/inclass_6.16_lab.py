@@ -3,6 +3,7 @@
 
 import runreport
 
+
 class Counter:
     def __init__(self, val):
         self.counterval = val
@@ -10,7 +11,8 @@ class Counter:
     def increment(self):
         self.counterval = self.counterval + 1
 
-    # your code here
+    def show_value(self):
+        return self.counterval
 
 
 c = Counter(5)
@@ -18,10 +20,9 @@ c = Counter(5)
 c.increment()
 c.increment()
 
-print(c.show_value())    # 7
+print(c.show_value())  # 7
 
 
 # Expected Output:
 
 # 7
-

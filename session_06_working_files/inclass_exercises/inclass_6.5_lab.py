@@ -9,21 +9,21 @@ import runreport
 
 import random
 
-# your code here
 
-
+class Random:
+    def get_rand(self, val):
+        return random.randint(1, val)
 
 
 obj = Random()
 
-val = obj.get_rand(5)     # random number from 1-5
+val = obj.get_rand(5)  # random number from 1-5
 print(val)
 
-val2 = obj.get_rand(18)   # random number from 1-18
+val2 = obj.get_rand(18)  # random number from 1-18
 print(val2)
 
 # Expected Output:
 
 # 4
 # 3
-

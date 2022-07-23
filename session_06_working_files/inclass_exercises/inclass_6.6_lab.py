@@ -3,20 +3,21 @@
 
 import runreport
 
-# your code here
 
+class Math:
+    def add(self, intx, inty):
+        return intx + inty
 
 
 obj = Math()
 
-mysum = obj.add(5, 10)        # 15
+mysum = obj.add(5, 10)  # 15
 print(mysum)
 
-mysum2 = obj.add(100, 150)    # 250
+mysum2 = obj.add(100, 150)  # 250
 print(mysum2)
 
 # Expected Output:
 
 # 15
 # 250
-

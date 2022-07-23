@@ -5,23 +5,24 @@
 
 import runreport
 
+
 class Counter:
-    # your class variable here
+    increment_value = 3
 
     def __init__(self, val):
         self.counterval = val
 
     def increment(self):
-        # increment .counterval here
+        self.counterval += Counter.increment_value
+
 
 c = Counter(5)
 
 c.increment()
 c.increment()
 
-print(c.counterval)    # 11 (5 + 3 + 3)
+print(c.counterval)  # 11 (5 + 3 + 3)
 
 # Expected Output:
 
 # 7
-

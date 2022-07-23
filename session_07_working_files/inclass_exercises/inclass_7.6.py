@@ -5,14 +5,20 @@
 #   1. regular attribute lookup (i.e., .cval)
 #   2. dir()
 #   3. Do.__dict__.keys()
-# 
-# 
+#
+#
+
 
 class Do:
 
-    cval = 5
+    cval = 5  # class variables / class attributes
 
-    def dothis(self):
-        print('done!')
+    def dothis(self):  # class variables / class attributes
+        self.a = [1, 2, 3]
+        print("done!")
 
 
+x = Do()
+x.dothis()
+x.var = 500
+print(x.__dict__)

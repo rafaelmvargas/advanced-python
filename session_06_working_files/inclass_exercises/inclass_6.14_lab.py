@@ -4,14 +4,16 @@
 
 import runreport
 
-# your code here
+
+class Counter:
+    def __init__(self, counterval=0):
+        self.counterval = counterval
 
 
 c = Counter(5)
 
-print(c.counterval)    # 5
+print(c.counterval)  # 5
 
 # Expected Output:
 
 # 5
-

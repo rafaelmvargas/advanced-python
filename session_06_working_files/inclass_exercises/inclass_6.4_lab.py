@@ -8,7 +8,10 @@ import runreport
 
 import time
 
-# your code here
+
+class Time:
+    def get_time(self):
+        return time.ctime()
 
 
 obj = Time()
@@ -17,4 +20,3 @@ print(obj.get_time())  # should show the current time
 # Expected Output:
 
 # Sat Oct 17 18:41:34 2020    (as your specific date and time)
-
