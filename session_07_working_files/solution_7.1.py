@@ -6,6 +6,20 @@
 
 
 """
+import csv
 
 class Config:
-    pass
+    def __init__(self, fname: str):
+        self.fname = fname
+
+        fh = open(fname, "r")
+        config_file = csv.reader(fh)
+
+        for line in config_file:
+            configs = line
+            print(configs)
+
+        fh.close()
+
+
+test = Config("pconfig copy.csv")
