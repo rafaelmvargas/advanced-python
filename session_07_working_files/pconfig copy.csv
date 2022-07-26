@@ -1,3 +1,4 @@
 db_uname,george
 db_password,password1
 data_query,"SELECT this, that FROM mytable WHERE col = 5"
+db_uname2,gladys
