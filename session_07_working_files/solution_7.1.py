@@ -10,11 +10,11 @@ import csv
 
 
 class Config:
-    """class for producing config instances, pass a fileanme and use .get() and set() functions"""
+    """class for producing config instances, pass a filename and use .get() and set() functions"""
 
     def __init__(self, filename: str):
         """
-        Constructor that takes a csv filename as an arguement
+        Constructor that takes a csv filename as an argument
         """
         self.params = {}
         self.filename = filename
