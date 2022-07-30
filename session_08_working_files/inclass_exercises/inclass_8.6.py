@@ -9,3 +9,6 @@ dol = {  'a': [1, 2, 3],
 
 df = pd.DataFrame(dol)
 
+print(df.columns)   # Index object representing the column labels
+print(df.index)     # Index object representing the row labels
+print(df)

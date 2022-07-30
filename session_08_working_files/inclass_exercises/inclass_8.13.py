@@ -10,3 +10,25 @@ dol = {  'a': [1, 2, 3],
 df = pd.DataFrame(dol, index=['x', 'y', 'z'])
 
 
+print(df)
+
+print()
+
+
+# David recommends .loc[] for most if not all of
+# your dataframe slicing needs
+# there are multiple ways to slice with .loc[]
+# a string: retrieve a series
+# a list of labels: retrive specified rows
+# dfs = df.loc[['x','z']]
+
+# a range of labels: df.loc['x':'z']
+
+dfs = df.loc['y':'z', 'a':'b']
+dfs = df.loc['y':'z', ['a','c']]
+dfs = df.loc['y':'z', 'a']
+
+# how would i select ll rows, but only some columns
+dfs = df.loc[:,['a','c']]
+
+print(dfs)

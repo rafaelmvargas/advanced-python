@@ -4,5 +4,8 @@
 
 import pandas as pd
 
-df = pd.read_csv('../student_db_names.csv')
+df = pd.read_csv("../student_db_names.csv")
 
+# Group by
+
+print(df.groupby("state").id.count())

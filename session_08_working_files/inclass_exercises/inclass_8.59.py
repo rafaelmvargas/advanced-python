@@ -7,7 +7,16 @@
 
 import pandas as pd
 
-sgrades = pd.read_csv('../student_db_grades.csv', sep=':')
-snames = pd.read_csv('../student_db_names.csv')
+sgrades = pd.read_csv("../student_db_grades.csv", sep=":")
+snames = pd.read_csv("../student_db_names.csv")
 
 
+# print(sgrades)
+# print()
+
+
+snames = snames.set_index('id')
+print(snames)
+snames =snames.reset_index()
+print(snames)
+print(pd.merge(snames, sgrades, on="id"))

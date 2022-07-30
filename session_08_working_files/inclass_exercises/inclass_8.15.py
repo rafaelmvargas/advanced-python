@@ -6,4 +6,7 @@ import pandas as pd
 
 df = pd.read_csv('../student_db_names.csv')
 
+print(df)
 
+print()
+print(df.loc[0:3])

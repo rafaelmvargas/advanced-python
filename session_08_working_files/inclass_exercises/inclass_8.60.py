@@ -8,3 +8,8 @@ sgrades = pd.read_csv('../student_db_grades.csv', sep=':', index_col='id')
 snames = pd.read_csv('../student_db_names.csv', index_col='id')
 
 
+print(sgrades)
+print()
+print(snames)
+print()
+print(snames.join(sgrades))

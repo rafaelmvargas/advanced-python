@@ -7,3 +7,4 @@ df = pd.read_csv('../FF_abbreviated.txt', sep='\s+')
 
 
 
+print(df.head(3))
