@@ -31,8 +31,8 @@ class Config:
         """
         try:
             return self.params[key]
-        except Exception as error:
-            print(f"Key {error} does not exist")
+        except KeyError:
+            raise
 
     def read_csv_file(self):
         fh = open(self.filename, "r")
@@ -45,7 +45,7 @@ class Config:
                     raise ValueError
                 self.params[line[0]] = line[1]
         except ValueError:
-            print("At least one Key-Value pair is corrupt")
+            raise
 
         fh.close()
 
@@ -53,8 +53,11 @@ class Config:
         """
         used to set a key with a value
         """
+        if key in self.params:
+            raise KeyError
+        else:
+            self.params[key] = value
 
-        self.params[key] = value
         self.write_csv_file()
 
     def write_csv_file(self):
