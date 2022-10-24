@@ -28,7 +28,7 @@ dfs = df.loc['y':'z', 'a':'b']
 dfs = df.loc['y':'z', ['a','c']]
 dfs = df.loc['y':'z', 'a']
 
-# how would i select ll rows, but only some columns
+# how would i select all rows, but only some columns
 dfs = df.loc[:,['a','c']]
 
 print(dfs)

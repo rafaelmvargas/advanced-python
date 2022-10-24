@@ -2,7 +2,7 @@
  solution_7.1.py -- Load and save config to file via a class
  
  Author: Rafael Vargas (rmv235@stern.nyu.edu)
- Last Revised: 7/23/2022
+ Last Revised: 8/5/2022 -- Fourth revision
 
 
 """
@@ -32,20 +32,17 @@ class Config:
         try:
             return self.params[key]
         except KeyError:
-            raise
+            raise KeyError(f"key '{key}' not in config")
 
     def read_csv_file(self):
         fh = open(self.filename, "r")
         config_file = csv.reader(fh)
 
         # check for corruption
-        try:
-            for line in config_file:
-                if len(line) != 2:
-                    raise ValueError
-                self.params[line[0]] = line[1]
-        except ValueError:
-            raise
+        for line in config_file:
+            if len(line) != 2:
+                raise ValueError(f"not enough values to unpack")
+            self.params[line[0]] = line[1]
 
         fh.close()
 
@@ -54,7 +51,7 @@ class Config:
         used to set a key with a value
         """
         if key in self.params:
-            raise KeyError
+            raise KeyError(f"'{key}' already in config")
         else:
             self.params[key] = value
 
@@ -81,7 +78,7 @@ print(conf.get("data_query"))  # SELECT this, that FROM ...
 # may cause it to be empty the next time it is read (which may be
 # "ValueError:  not enough values to unpack"); see read_csv_file(self) below
 
-conf.set("db_uname2", "gladys")
+# conf.set("db_uname2", "gladys")
 
 print(conf.get("db_uname2"))  # gladys
 
@@ -90,7 +87,9 @@ print(conf.get("db_uname2"))  # gladys
 
 newconf = Config("pconfig copy.csv")
 
-print(newconf.get("db_uname2"))  # gladys  (confirms that the file has the new value)
+print(
+    newconf.get("db_uname2")
+)  # gladys  (confirms that the file has the new value)
 
 
 # FILENAME AND FILE EXTENSION ARE ALSO STORED IN THE INSTANCE
